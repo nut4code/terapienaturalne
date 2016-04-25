@@ -1,0 +1,85 @@
+//:: blog
+//
+// MENU :
+//
+//variables
+//mixins
+//scss
+//
+//
+//
+////// variables :
+//
+////// mixins :
+//
+// // End of my parallax mixins
+//
+////// scss :
+//
+//
+#blog {
+    ul {
+        list-style-type: none;
+        li {
+            text-align: left;
+        }
+    }
+    .row {
+        justify-content: center;
+    }
+    h1 {
+        padding-top: $nav-main-height + 2rem;
+        padding-bottom: 1rem;
+    }
+    .container {
+        background-color: #fff;
+        .card-deck {
+            align-items: flex-start;
+            .card {
+                background-color: $gray-lighter;
+                border: none;
+                padding: 0;
+                .card-img-top-cover {
+                    min-width: 100%;
+                    height: 12rem;
+                    position: relative;
+                    overflow: hidden;
+                    .card-img-top {
+                        position: relative;
+                        width: 100%;
+                    }
+                }
+                .card-spec {
+                    color: $gray-light;
+                }
+                .card-text {
+                    // max-width: 100%;
+                    min-width: 100%;
+                    height: auto;
+                    text-align: left;
+                    color: $gray-dark;
+                }
+            }
+        }
+    }
+}
+
+// <div class="col-xs-4">
+//     <div class="card">
+//   <img class="card-img-top" src="<?php echo catch_that_image() ?>" alt="<?php the_title(); ?>">
+//   <div class="card-block">
+//     <h4 class="card-title"><?php the_title(); ?></h4>
+//     <span class="card-author small">Autor: <?php echo the_author_meta( 'user_nicename', $author_id ); ?> | Data utworzenia: <?php echo get_the_date(); ?></span>
+//     <hr>
+//    <!--  <p class="card-text"><?php echo $post->post_content; ?></p> -->
+//     <p class="card-text">
+//     <?php echo $my_excerpt = fr_excerpt_by_id($post_id, 100, FALSE);
+// // $post_id is the id of the desired post. We want an excerpt of up to 40 words, with <p> and <br /> tags stripped.
+// echo '<meta property="og:description" content="' . $my_excerpt . '" />';
+// // example usage for an Open Graph description tag
+// ?>
+//     </p>
+//     <a class="button" role="button" href="<?php echo get_permalink(); ?>">Czytaj dalej...</a>
+//     <hr>
+//   </div>
+//   </div>

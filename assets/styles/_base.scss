@@ -1,0 +1,59 @@
+//:: BASE
+//
+// MENU :
+//
+//variables
+//mixins
+//scss
+//includes
+//
+//
+////// variables :
+//
+$nav-main-height: 3.125rem;
+$retina: "only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx)";
+//
+//
+////// mixins :
+//
+@import "base/custom-mixins";
+//
+////// scss :
+//
+html {
+    // min-height: 100%;
+    height: auto;
+    overflow-x: hidden;
+    body {
+        // min-height: 100%;
+        height: auto;
+        .section {
+            @include section-mix;
+            padding-top: 0;
+            .subsection {
+                @include section-mix;
+                padding-top: 0;
+                overflow-x: hidden;
+                max-width: 100%;
+            }
+        }
+        .section-post {
+            @include section-mix;
+        }
+        a:hover, a:active, a:focus, a:visited, a:link {
+            text-decoration: none;
+        }
+    }
+}
+
+//
+////// includes :
+//
+@import "base/nav-main";
+@import "base/home";
+@import "base/offer";
+@import "base/blog";
+@import "base/about";
+@import "base/contact";
+@import "base/post";
+@import "base/footer";

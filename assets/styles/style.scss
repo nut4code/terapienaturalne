@@ -1,0 +1,31 @@
+/*
+Theme Name: terapienaturalne
+Description: A simple WordPress theme/framework created for Grzegorz Marc.
+Version: 0.6.9
+Author: Rafal Orzechowski
+Tags: bootstrap-theme,terapienaturalne
+*/
+
+
+/*
+This program is owned by Rafal Orzechowski.
+It can be used in unmodified form for Grzegorz Marc websites only.
+*/
+
+// Core variables and mixins
+
+// custom fonts scss file
+@import "fonts";
+
+// custom variables import goes first, other files after imports of original boostrap files
+@import "variables";
+
+// slick 1.5.9
+@import "../js/slick-1.5.9/slick/slick.scss";
+@import "../js/slick-1.5.9/slick/slick-theme.scss";
+
+// all active and unactive bootstrap sass refferences
+@import "bootstrap";
+
+// custom scss styles
+@import "base";

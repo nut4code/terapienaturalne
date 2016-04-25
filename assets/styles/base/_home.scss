@@ -1,0 +1,140 @@
+//:: HOME
+//
+// MENU :
+//
+//variables
+//mixins
+//scss
+//
+//
+//
+////// variables :
+//
+// images
+//
+// home img path
+$home-img-path: 'assets/img/home/';
+//
+////  slick images
+//
+//home slick img folder
+$home-slick-img-fld: 'slick/';
+//
+//home-slick-img-1
+$home-slick-img-1-name: 'wellness';
+$home-slick-img-1-type: 'jpg';
+//
+////// mixins :
+//
+//
+//
+////// scss :
+//
+//
+#strona-domowa {
+    @include section-mix($section-bg-size: cover, $section-bg-repeat: no-repeat);
+    padding: 0;
+    min-height: 100vh;
+    height: auto;
+    position: relative;
+    #home-welcome-txt {
+        padding: 10rem 0 4rem 0;
+        width: 100%;
+        text-align: -webkit-center;
+        test-align: center;
+        h1,
+        h2,
+        h3 {
+            color: #FFF;
+        }
+        h4,
+        h5,
+        h6,
+        p,
+        span {
+            color: #EEE;
+        }
+    }
+    .container {
+        // position: relative;
+        @include flex-items;
+        #home-offers {
+            padding: 0 0 1rem;
+            justify-content: center;
+            // position: absolute;
+            // top: 10rem;
+            width: 100%;
+            .home-offer {
+                padding: .5rem;
+                // @media only screen and (min-width:0rem) {
+                //     height: auto;
+                // }
+                // @media only screen and (min-width:34rem) {
+                //     height: 5rem;
+                // }
+                .home-offers-image {
+                    @media only screen and (min-width: 0rem) {
+                        height: auto;
+                    }
+                    @media only screen and (min-width:34rem) {
+                        height: auto;
+                    }
+                    @media only screen and (min-width:48rem) {
+                        height: 18rem;
+                    }
+                    border-radius: .5rem;
+                    // padding: .5rem;
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    // background-attachment: fixed;
+                    background-size: cover;
+                    z-index: 2;
+                    overflow: hidden;
+                    border: 1px solid transparent;
+                    color: #dedede;
+                    -webkit-transition: all .25s ease-in-out;
+                    -moz-transition: all .25s ease-in-out;
+                    -o-transition: all .25s ease-in-out;
+                    transition: all .25s ease-in-out;
+                    @include flex-items;
+                    &:hover,
+                    &:active {
+                        border: 1px solid #fff;
+                        color: #fff;
+                    }
+                    .home-offers-name {
+                        position: relative;
+                        width: 100%;
+                        min-width: 100%;
+                        padding: 8%;
+                        background-color: rgba(0, 0, 0, .5);
+                        text-align: center;
+                        z-index: 3;
+                    }
+                }
+            }
+        }
+    }
+    .home-carousel {
+        .home-slick-item {
+            max-width: 100%;
+            min-height: 100vh;
+            height: auto;
+            background-size: cover;
+            background-position: center center;
+            -webkit-filter: brightness(70%);
+            filter: brightness(70%);
+            .img-responsive {
+                height: auto;
+                width: 100%;
+                min-width: 100%;
+                max-width: 100%;
+            }
+        }
+        #home-slick-img-1 {
+            // @include retina-bg-img($current-bg-img-path: $home-img-path + $home-slick-img-fld, $retina-bg-img-name: $home-slick-img-1-name, $retina-bg-img-type: $home-slick-img-1-type);
+            background-size: cover;
+            background-position: center center;
+        }
+    }
+}

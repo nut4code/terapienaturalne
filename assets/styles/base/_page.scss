@@ -1,0 +1,124 @@
+/* //:: offer
+//
+// MENU :
+//
+//variables
+//mixins
+//scss
+//
+//
+//
+////// variables :
+//
+//offer path
+$offer-img-path: 'assets/img/offer/';
+// offer bg
+$offer-bg-img-name: 'offer-bg-repeat';
+$offer-bg-img-type: 'jpg';
+// offer container bg
+// $offer-container-bg-img-name:;
+// $offer-container-bg-img-type:;
+//
+////// mixins :
+//
+//
+////// scss :
+//
+//
+#page {
+    // @include retina-bg-img($current-bg-img-path: $offer-img-path, $retina-bg-img-name: $offer-bg-img-name, $retina-bg-img-type: $offer-bg-img-type);
+    @include section-mix($section-bg-size: cover, $section-bg-repeat: no-repeat);
+    // background-color: $gray-lighter;
+    .offer-banner {
+        height: 15rem;
+        width: 100%;
+        // background-size: fixed;
+        background-repeat: no-repeat;
+        background-position: center center;
+        // position: relative;
+        background-attachment: fixed;
+        background-size: cover;
+        z-index: -1;
+        .offer-name {
+            position: relative;
+            top: 50%;
+            padding: .05rem 0;
+            // position: absolute;
+            width: 100%;
+            background-color: rgba(0, 0, 0, .5);
+            text-align: center;
+            z-index: 2;
+            h1,h2,h3,h4,h5,h6 {
+                color: #fff;
+            }
+        }
+    }
+    #offer-description-row {
+        margin-bottom: 1rem;
+        #offer-description-col {
+            padding: 1rem 2rem;
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+    }
+    @include oferta-border($oferta-border-color: $brand-info);
+    //
+    .offer-addition {
+        padding: .5rem;
+        margin: 0 0 1rem 0;
+        .offer-addition-image {
+            height:10rem;
+            width:100%;
+            max-width:100%;
+            background-repeat: no-repeat;
+            background-position: center center;
+            // background-attachment: fixed;
+            background-size: cover;
+            z-index: 2;
+            border: 1px solid transparent;
+            color: #dedede;
+            -webkit-transition: all .25s ease-in-out;
+            -moz-transition: all .25s ease-in-out;
+            -o-transition: all .25s ease-in-out;
+            transition: all .25s ease-in-out;
+            &:hover,
+            &:active {
+                border: 1px solid $brand-info;
+                color: #fff;
+            }
+            .offer-addition-name {
+                position: relative;
+                width: 100%;
+                top: 40%;
+                padding: .05rem 0;
+                background-color: rgba(0, 0, 0, .5);
+                text-align: center;
+                z-index: 3;
+            }
+        }
+    }
+    //
+    div {
+        // height: 10rem;
+        .offer-carousel {
+            width: 100%;
+            margin: auto;
+            i {
+                cursor: pointer;
+            }
+            .offer-slick-item {
+                padding: 1rem;
+                img {
+                    height: auto;
+                    width: 100%;
+                    display: block;
+                    margin: 0 auto;
+                    border-radius: 0.5rem;
+                }
+            }
+        }
+    }
+}
+ */

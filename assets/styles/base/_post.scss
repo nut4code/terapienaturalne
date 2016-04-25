@@ -1,0 +1,56 @@
+//:: post
+//
+// MENU :
+//
+//variables
+//mixins
+//scss
+//
+//
+//
+////// variables :
+//
+//
+////// mixins :
+//
+//
+////// scss :
+//
+//
+.section-post {
+    hr {
+        // border-color: $brand-success;
+    }
+    .post-bg {
+        // border: 1px dashed $brand-info;
+        .post-area {
+            padding: 3rem 0 1rem;
+            background-color: #FFF;
+        }
+        .post-title {
+            // color: transparentize($brand-primary, .25);
+            color: $brand-primary;
+            margin-bottom: 1rem;
+        }
+        .post-spec {
+            text-align: left;
+            color: $gray-light;
+            .entry-date {}
+            .post-spec-author {}
+            .post-spec-divider {}
+            .entry-date {}
+        }
+        .post-perm {}
+        .post-content {
+            overflow-y: auto;
+            overflow-x: hidden;
+            img:first-child {
+                padding: 1rem 1.5rem;
+                float: left;
+                max-width: 100%;
+                height: auto;
+            }
+            p {}
+        }
+    }
+}

@@ -1,0 +1,108 @@
+//:: contact
+//
+// MENU :
+//
+//variables
+//mixins
+//scss
+//
+//
+//
+////// variables :
+//
+////// mixins :
+//
+// // End of my parallax mixins
+//
+////// scss :
+//
+//
+// #kontakt {
+//     // background-color: transparentize($gray-lighter, 0.5);
+//     background-color: $gray-lighter;
+//     padding-top: $nav-main-height + 1rem;
+//     .container {
+//         h1,
+//         h2,
+//         h3,
+//         h4,
+//         {
+//             padding-bottom: 1rem;
+//         }
+//         #contact-info-container {
+//             #contact-info-content {
+//                 text-align: center;
+//             }
+//         }
+//         #contact-form-container {
+//             #contact-form-content {
+//                 padding: .5rem;
+//                 border-radius: .5rem;
+//                 border: 1px solid $brand-success;
+//             }
+//         }
+//         #contact-google-map-container {
+//           margin-top: 2rem;
+//             .acf-map {
+//                 width: 100%;
+//                 height: 400px;
+//                 // border: #ccc solid 1px;
+//                 margin-bottom: 1rem;
+//             }
+//             /* fixes potential theme css conflict */
+//             .acf-map img {
+//                 max-width: inherit !important;
+//             }
+//         }
+//     }
+// }
+#kontakt {
+    // background-color: transparentize($gray-lighter, 0.5);
+    background-color: $gray-lighter;
+    padding-top: $nav-main-height + 2rem;
+    h1,
+    h2,
+    h3,
+    h4,
+    {
+        padding-bottom: 1rem;
+    }
+    .container {
+        #contact-info-container {
+            margin-bottom: 2rem;
+            #contact-info-content {
+                text-align: center;
+            }
+        }
+        #contact-form-container {
+            margin-bottom: 2rem;
+            p {
+                margin: 0;
+            }
+            #contact-form-content {
+                display: flex;
+                justify-content: center;
+                padding: .5rem;
+                border-radius: .5rem;
+                // border: 1px solid $gray-light;
+                border: none;
+                .ajax-loader {
+                    display: none;
+                }
+            }
+        }
+    }
+    #contact-google-map-container {
+        //margin-top: 2rem;
+        .acf-map {
+            width: 100%;
+            height: 20rem;
+            // border: #ccc solid 1px;
+            margin-bottom: 1rem;
+        }
+        /* fixes potential theme css conflict */
+        .acf-map img {
+            max-width: inherit !important;
+        }
+    }
+}

@@ -1,0 +1,133 @@
+//:: NAV-MAIN
+//
+// MENU :
+//
+//variables
+//mixins
+//scss
+//
+//
+//
+////// variables :
+//
+$nav-main-logo_tn: 'assets/img/nav-main/logo-tn.png';
+//
+////// mixins :
+//
+//
+//
+////// scss :
+//
+//
+#nav-main {
+    background-color: rgba(255, 255, 255, 1);
+    // box shadow right bottom left
+    // -webkit-box-shadow: 0px 0.05rem 0.05rem $brand-info;
+    // -moz-box-shadow: 0px 0.05rem 0.05rem $brand-info;
+    // box-shadow: 0px 0.05rem 0.05rem $brand-info;
+    //
+    //background-color transition
+    -webkit-transition: all .6s ease-in;
+    -moz-transition: all .6s ease-in;
+    -o-transition: all .6s ease-in;
+    transition: all .6s ease-in;
+    padding: .3rem 0;
+    //
+    #nav-main-top-header,
+    #nav-main-2-top-header {
+        font-weight: 300;
+        padding-bottom: 0.3rem;
+        margin-bottom: 0.5rem;
+        -webkit-box-shadow: 0px 0.05rem 0.05rem $brand-success;
+        -moz-box-shadow: 0px 0.05rem 0.05rem $brand-success;
+        box-shadow: 0px 0.05rem 0.05rem $brand-success;
+        i {
+            padding: 0 .2rem 0 0;
+        }
+        a {
+            padding: 0 1rem;
+            text-decoration: none;
+        }
+    }
+    .container {}
+    .navbar-brand {
+        @include img-fit-to-div($img-fit-to-div-url: $nav-main-logo_tn);
+        height: 3.5rem;
+        width: 8.75rem;
+        padding: 0;
+        // logo transition
+        -webkit-transition: all .4s ease-in;
+        -moz-transition: all .4s ease-in;
+        -o-transition: all .4s ease-in;
+        transition: all .4s ease-in;
+        //
+        &.small-brand {
+            height: 2.5rem;
+            width: 6.25rem;
+        }
+    }
+    li {
+        margin: 0 1rem;
+        // &:hover, &:active {
+        //   color: darken($brand-success, 0.5)
+        // }
+        a {
+            color: $brand-warning;
+            -webkit-transition: 1s all ease-out;
+            -moz-transition: 1s all ease-out;
+            transition: 1s all ease-out;
+            border-bottom: 1px solid transparent;
+            &:hover {
+                color: $brand-danger;
+                border-bottom: 1px solid $brand-info;
+            }
+            // &.active {
+            //     border-bottom: 1px solid $brand-info;
+            //     // color: $brand-danger;
+            // }
+            .dropdown:hover .dropdown-menu {
+                display: block;
+                margin-top: 0; // remove the gap so it doesn't close
+            }
+        }
+    }
+    .open {
+        >.dropdown-menu {
+            -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+        }
+    }
+    .dropdown-menu {
+        // dropdown animation styles:
+        -webkit-transform-origin: top;
+        transform-origin: top;
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+        -webkit-transform: scale(1, 0);
+        transform: scale(1, 0);
+        display: block;
+        transition: all 0.25s ease-out;
+        -webkit-transition: all 0.25s ease-out;
+        // other styles:
+        // background-color: rgba(255,255,255,0.9);
+        border: 1px solid transparentize($brand-success, 0.65);
+        // &:hover {
+        //     // background-color: rgba(255,255,255,1);
+        // }
+        .dropdown-item {
+            background-color: transparent;
+            &:hover,
+            &:focus {
+                // background-color: transparentize($brand-success, 0.75);
+                // background-color: transparentize($brand-primary, 0.9);
+                background-color: transparent;
+            }
+        }
+    }
+    .dropup {
+        .dropdown-menu {
+            -webkit-transform-origin: bottom;
+            transform-origin: bottom;
+        }
+    }
+}

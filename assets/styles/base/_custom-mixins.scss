@@ -1,0 +1,81 @@
+//:: CUSTOME MIXINS
+//
+// MENU :
+//
+//
+// every section style
+// @mixin section-mix($section-bg-col: #FFF, $section-txt-align: center, $section-min-height: 100vh, $section-h1-margin-top: 1rem, $section-bg-pos: center center, $section-bg-size: cover, $section-bg-repeat: no-repeat) {
+//     background-color: $section-bg-col;
+//     text-align: $section-txt-align;
+//     padding-top: $nav-main-height + 1rem;
+//     // padding-bottom: 1.5rem;
+//     // min-width: $section-min-width;
+//     min-height: $section-min-height;
+//     h1 {
+//         margin-top: $section-h1-margin-top;
+//     }
+//     background-position: $section-bg-pos;
+//     background-size: $section-bg-size;
+//     background-repeat: $section-bg-repeat;
+// }
+@mixin section-mix($section-bg-col: #FFF, $section-txt-align: center, $section-h1-margin-top: 1rem, $section-bg-pos: center center, $section-bg-size: cover, $section-bg-repeat: no-repeat) {
+    background-color: $section-bg-col;
+    text-align: $section-txt-align;
+    // padding-top: $nav-main-height + 1rem;
+    // padding-bottom: 1.5rem;
+    // min-width: $section-min-width;
+    // min-height: $section-min-height;
+    h1 {
+        margin-top: $section-h1-margin-top;
+    }
+    background-position: $section-bg-pos;
+    background-size: $section-bg-size;
+    background-repeat: $section-bg-repeat;
+}
+
+// background
+@mixin retina-bg-img($current-bg-img-path, $retina-bg-img-name, $retina-bg-img-type, $retina-bg-img-width: 50%, $retina-bg-img-height: 50%) {
+    background-image: url($current-bg-img-path + $retina-bg-img-name + '.' + $retina-bg-img-type);
+    @media #{$retina} {
+        background-image: url($current-bg-img-path + $retina-bg-img-name + '@2x.' + $retina-bg-img-type);
+        background-size: $retina-bg-img-width, $retina-bg-img-height;
+    }
+}
+
+// images fit into div as a background
+@mixin img-fit-to-div($img-fit-to-div-url) {
+    background-image: url(#{$img-fit-to-div-url});
+    background-position: center center;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+// oferta scss:
+//
+@mixin oferta-border ($oferta-border-color: $brand-info) {
+    // #oferta-#{$oferta-id-no} {
+    #offer-description-row {
+        #offer-description-col {
+            // background-color: transparentize($oferta-id-bg, .85);
+            border: 1px dashed transparentize($oferta-border-color, .5);
+            border-bottom: none;
+            border-top: none;
+            border-left: none;
+        }
+    }
+    // }
+}
+
+@mixin flex-items {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-align-items: center;
+    -ms-flex-pack: center;
+}
